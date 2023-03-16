@@ -1,4 +1,5 @@
 import Task01.Rectangle;
+import Task02.Circle.Circle;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,5 +7,9 @@ public class Main {
         Rectangle rectangle2 = new Rectangle(5, 6);
         System.out.println("rectangle 1 area: " + rectangle1.getArea());
         System.out.println("rectangle 2 area: " + rectangle2.getArea());
+        Circle circle1=new Circle(2,"blue");
+        System.out.println("circle 1 area: " + circle1.getArea());
+        circle1.setRadius(5);
+        System.out.println("circle 1 area: " + circle1.getArea());
     }
 }
