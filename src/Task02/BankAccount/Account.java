@@ -15,38 +15,38 @@ public class Account {
     private int balance=0;
 
     public String getId(){
-        return this.id;
+        return id;
     }
     public String getName(){
-        return this.name;
+        return name;
     }
 
     public int getBalance() {
-        return this.balance;
+        return balance;
     }
     public int credit(int amount){
         this.balance+=amount;
-        return this.balance;
+        return balance;
     }
     public int debit(int amount){
-        if(amount<=this.balance)
+        if(amount<=balance)
             this.balance-=amount;
         else
             System.out.println("Amount exceeded balance.");
-        return this.balance;
+        return balance;
     }
     public int transferTo(Account another,int amount){
-        if(amount<=this.balance){
+        if(amount<=balance){
             this.balance-=amount;
             another.balance+=amount;
-            System.out.println("Your balance: "+this.balance);
+            System.out.println("Your balance: "+balance);
             System.out.println("Another's balance: "+another.balance);
         }
         else
             System.out.println("Amount exceeded balance.");
-        return this.balance;
+        return balance;
     }
 public String ToString(){
-        return "Account: [ id= "+this.id+", name= "+this.name+", balance= "+this.balance+" ]";
+        return "Account: [ id= "+getId()+", name= "+getName()+", balance= "+getBalance()+" ]";
     }
 }
